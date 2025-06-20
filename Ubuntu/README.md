@@ -13,8 +13,8 @@ Repository pro vyuku na SPOS DK
 ### Instalace Zabbix Agent2
 
 ```console
-wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest+ubuntu22.04_all.deb
-dpkg -i zabbix-release_latest+ubuntu22.04_all.deb
+wget https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu22.04_all.deb
+dpkg -i zabbix-release_latest_7.0+ubuntu22.04_all.deb
 
 apt-get update
 apt-get install -y zabbix-agent2 zabbix-agent2-plugin-*
@@ -28,9 +28,9 @@ systemctl start zabbix-agent2
 ```console
 joe /etc/zabbix/zabbix_agent2.conf
 ...
-Hostname=ubuntu-8e714c18
-Server=enceladus.pfsense.cz
-ServerActive=enceladus.pfsense.cz
+Hostname=ubuntu-3f1f9597
+Server=192.168.1.2
+ServerActive=ubuntu-3f1f9597
 Timeout=30
 HostMetadata=SPOS
 
